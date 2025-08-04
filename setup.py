@@ -19,82 +19,43 @@ def replace_num(file,initial,new_num):
     with open(file,"w") as f:
         f.writelines(newline)
 
-for x in range(1,4):
-	if os.system("sudo apt-get update") == 0:
-		break
+os.system("sudo apt-get update")
+os.system("sudo apt-get -y upgrade")
 
 os.system("sudo apt-get purge -y wolfram-engine")
 os.system("sudo apt-get purge -y libreoffice*")
 os.system("sudo apt-get -y clean")
 os.system("sudo apt-get -y autoremove")
 
-# for x in range(1,4):
-# 	if os.system("sudo apt-get -y upgrade") == 0:
-# 		break
+os.system("sudo pip3 install -U pip")
 
-for x in range(1,4):
-	if os.system("sudo pip3 install -U pip") == 0:
-		break
+os.system("sudo apt-get install -y python-dev python-pip libfreetype6-dev libjpeg-dev build-essential")
 
-for x in range(1,4):
-	if os.system("sudo apt-get install -y python-dev python-pip libfreetype6-dev libjpeg-dev build-essential") == 0:
-		break
+os.system("sudo apt-get install -y swig")
 
-for x in range(1,4):
-	if os.system("sudo apt-get install -y swig") == 0:
-		break
+os.system("sudo apt-get install -y flac")
 
-for x in range(1,4):
-	if os.system("sudo apt-get install -y flac") == 0:
-		break
+os.system("sudo apt-get install -y bison libasound2-dev swig")
 
-for x in range(1,4):
-	if os.system("sudo apt-get install -y bison libasound2-dev swig") == 0:
-		break
+os.system("sudo -H pip3 install --upgrade luma.oled")
 
-for x in range(1,4):
-	if os.system("sudo -H pip3 install --upgrade luma.oled") == 0:
-		break
+os.system("sudo apt-get install -y i2c-tools")
 
-for x in range(1,4):
-	if os.system("sudo apt-get install -y i2c-tools") == 0:
-		break
+os.system("sudo apt-get install -y python3-opencv")
 
-for x in range(1,4):
-	if os.system("sudo apt-get install -y python3-opencv") == 0:
-		break
+os.system("sudo pip3 install adafruit-pca9685")
 
-for x in range(1,4):
-	if os.system("sudo pip3 install adafruit-pca9685") == 0:
-		break
+os.system("sudo pip3 install rpi_ws281x")
 
-for x in range(1,4):
-	if os.system("sudo pip3 install rpi_ws281x") == 0:
-		break
+os.system("sudo apt-get install -y python3-smbus")
 
-for x in range(1,4):
-	if os.system("sudo apt-get install -y python3-smbus") == 0:
-		break
+os.system("sudo pip3 install mpu6050-raspberrypi")
 
-for x in range(1,4):
-	if os.system("sudo pip3 install mpu6050-raspberrypi") == 0:
-		break
+os.system("sudo pip3 install flask")
 
-for x in range(1,4):
-	if os.system("sudo pip3 install flask") == 0:
-		break
+os.system("sudo pip3 install flask_cors")
 
-for x in range(1,4):
-	if os.system("sudo pip3 install flask") == 0:
-		break
-
-for x in range(1,4):
-	if os.system("sudo pip3 install flask_cors") == 0:
-		break
-
-for x in range(1,4):
-	if os.system("sudo pip3 install websockets") == 0:
-		break
+os.system("sudo pip3 install websockets")
 
 try:
 	replace_num("/boot/config.txt",'#dtparam=i2c_arm=on','dtparam=i2c_arm=on\nstart_x=1\n')
@@ -102,36 +63,26 @@ except:
 	print('try again')
 
 
-for x in range(1,4):
-	if os.system("sudo pip3 install numpy") == 0:
-		break
+os.system("sudo pip3 install numpy")
 
 
-for x in range(1,4):
-	if os.system("sudo apt-get -y install libqtgui4 libhdf5-dev libhdf5-serial-dev libatlas-base-dev libjasper-dev libqt4-test") == 0:
-		break
+os.system("sudo apt-get -y install libqtgui4 libhdf5-dev libhdf5-serial-dev libatlas-base-dev libjasper-dev libqt4-test")
 
-for x in range(1,4):
-	if os.system("sudo pip3 install imutils zmq pybase64 psutil") == 0:   ####
-		break
+os.system("sudo pip3 install imutils zmq pybase64 psutil")
 
-for x in range(1,4):
-	if os.system("sudo git clone https://github.com/oblique/create_ap") == 0:
-		break
+# os.system("sudo git clone https://github.com/oblique/create_ap")
 
-try:
-	os.system("cd " + thisPath + "/create_ap && sudo make install")
-except:
-	pass
+# try:
+# 	os.system("cd " + thisPath + "/create_ap && sudo make install")
+# except:
+# 	pass
 
-try:
-	os.system("cd //home/pi/create_ap && sudo make install")
-except:
-	pass
+# try:
+# 	os.system("cd //home/pi/create_ap && sudo make install")
+# except:
+# 	pass
 
-for x in range(1,4):
-	if os.system("sudo apt-get install -y util-linux procps hostapd iproute2 iw haveged dnsmasq") == 0:
-		break
+os.system("sudo apt-get install -y util-linux procps hostapd iproute2 iw haveged dnsmasq")
 
 try:
 	os.system('sudo touch //home/pi/startup.sh')
